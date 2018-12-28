@@ -35,6 +35,7 @@ void play_hangman(string word){
             ++misses;
             if (misses == 10){
                 cout << "Guesser lost :(" << endl;
+                cout << "The word was " << word << endl;
                 return;
             }
 
@@ -56,8 +57,14 @@ void play_hangman(string word){
             cout << i << " ";
         }
         cout << endl;
+        cout << "Letters that you have guessed: ";
+        auto it = guesses.begin();
+        while (it != guesses.end()){
+            cout << it->first << " ";
+            ++it;
+        }
+        cout << endl;
     
     }
     cout << "Guesser Won!!" << endl;
-
 }
