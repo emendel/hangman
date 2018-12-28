@@ -4,12 +4,11 @@
 #include <iostream>
 using namespace std;
 
-void play_hangman(string word);
-
 void play_hangman(string word){
     map <char, int> guesses;
     vector <char> output;
     map <char, int> distinct;
+
     for (int i = 0; i < word.length(); ++i){
         output.push_back('_');
         if (distinct.find(word[i]) == distinct.end()){

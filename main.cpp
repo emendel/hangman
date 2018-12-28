@@ -17,7 +17,8 @@ int main(){
     }
 
     if (people == 1){
-        //Have computer randomly pick a word
+        //Have computer randomly pick a word 
+        //From a dictionary of 10,000 words
         vector <string> words;
         ifstream file;
         file.open("dictionary.txt");
